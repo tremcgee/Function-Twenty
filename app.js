@@ -2,6 +2,9 @@ function uname(){
     var pname = prompt("What ya name?")
     return pname
 }
+function greet (a){
+    alert(`Hello, ${a}!`)
+}
 function gennum(){
     var num = Math.floor(Math.random() * 10) +1;
     return num
@@ -31,9 +34,9 @@ function cturn(){
 function compare(b, c){
     if((b >= 20) && (c >= 20)){
         alert("Both the user and the computer have gone over 20, no one wins.")
-    }else if(b >= 20){
+    }else if(b >= 21){
         alert("The user has gone over 20 and therefore loses!")
-    }else if(b >= 20){
+    }else if(c >= 21){
         alert("The computer has gone over 20 and therefore loses!")
     }else if(b > c){
         alert("The user has won!")
@@ -44,11 +47,13 @@ function compare(b, c){
     }
 }
 function game(){
-    var name = uname()
-    alert(`Hello, ${name}!`)
-    pturn()
-    cturn()
-    compare(pturn, cturn)
+    var userscore = pturn()
+    var comscore = cturn()
+    compare(userscore, comscore)
+    var play2 = prompt("Do want to play again? y for yes n for no")
+    return play2
 }
-
-game()
+greet(uname())
+do{
+    repeat = game() 
+}while(repeat == "y")
