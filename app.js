@@ -32,7 +32,7 @@ function cturn(){
     return cscore
 }
 function compare(b, c){
-    if((b >= 20) && (c >= 20)){
+    if((b >= 21) && (c >= 21)){
         alert("Both the user and the computer have gone over 20, no one wins.")
     }else if(b >= 21){
         alert("The user has gone over 20 and therefore loses!")
